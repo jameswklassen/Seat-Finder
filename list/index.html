@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+  <title>Seat Finder</title>
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Seat Finder</h1>
+
+    <form action="map.html" method="GET">
+      <label for="section">Section</label><br>
+      <input type="number" id="section" name="section"><br>
+      <label for="row">Row</label><br>
+      <input type="number" id="row" name="row"><br>
+      <label for="seat">Seat</label><br>
+      <input type="number" id="seat" name="seat"><br>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <input type="file" accept="image/*">
+
+    <a class="btn" href="list.html">Continue</a>
+    </div>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

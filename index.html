@@ -2,10 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Seat Finder</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+  <title>Seat Finder</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,9 +16,27 @@
   <div class="container">
     <h1>Seat Finder</h1>
     <p>Choose between the two prototypes</p>
-    <a class="btn" href="map.html">Map</a>
-    <a class="btn" href="list.html">List</a>
-    <input type="file" accept="image/*">
+    <!-- <a id="prototype-map" class="btn" href="map/index.html">Map (Prototype A)</a> -->
+    <!-- <a id="prototype-list" class="btn" href="list/index.html">List (Prototype B)</a> -->
+    <a id="prototype-a" class="btn" href="map/index.html" data="map">Map (Prototype A)</a>
+    <a id="prototype-b" class="btn"  href="list/index.html" data="list">List (Prototype B)</a>
+
+
+    <!-- <video autoplay></video> -->
+
+    <!-- <script>
+    const constraints = {
+      video: true,
+    };
+    
+    const video = document.querySelector("video");
+    
+    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+      video.srcObject = stream;
+    });
+    </script> -->
+    <script type="text/javascript" src="js/main.js"></script>
+
   </div>
 </body>
 </html>
