@@ -1,0 +1,35 @@
+
+.map-container {
+	position: relative;
+	height: 600px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#seat-info {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	max-width: 300px
+}
+
+#map { 
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	width: 100%;
+}
+
+.btn {
+	display: inline-block;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: var(--primary);
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: #49a9e9;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Display a map on a webpage</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- <h1>Map</h1> -->
+
+    <div class="map-container">
+      <div id="seat-info">
+        <div class="field" id="section">
+          <span class="key">Section</span>
+          <span class="value">140</span>
+        </div>
+        <div class="field" id="row">
+          <span class="key">Row</span>
+          <span class="value">10</span>
+        </div>
+        <div class="field" id="seat">
+          <span class="key">Seat</span>
+          <span class="value">12</span>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+  </div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNrbGFzc2VuIiwiYSI6ImNrbWYzOW0xdTMwZHAycHcwMXVvNDR0bjgifQ.AdOE2Tt6HU-_Wqn-NLvRzw';
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 9 // starting zoom
+    });
+  </script>
+</body>
+</html>

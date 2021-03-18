@@ -1,0 +1,85 @@
+html {
+  /* Load system fonts */
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  
+  /* Make type rendering look crisper */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Disable auto-enlargement of small text in Safari */
+  text-size-adjust: 100%;
+  
+  /* Enable kerning and optional ligatures */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1.1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* padding: 15px; */
+}
+
+/**
+* Form elements render using OS defaults,
+* so font-family inheritance must be specifically declared
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+font-family: inherit;
+}
+
+:root {
+  --primary: #469bd3;
+  --text: #fff;
+}
+
+
+.container {
+  max-width: 768px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--primary);
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #49a9e9;
+}
+
+#seat-info {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+}
+
+#seat-info .field {
+  text-align: center;
+  margin: 15px;
+}
+
+#seat-info .key {
+  display: block;
+}
+
+#seat-info .value {
+  font-size: 1.7em;
+  font-weight: 600;
+}
