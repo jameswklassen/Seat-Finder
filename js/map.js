@@ -1,17 +1,18 @@
 const lat = 49.892665;
 const lon = -97.143768;
+const center = [lon, lat]
+
 const ROTATION_AMOUNT = 45;
+const initialMapParams = { center, zoom: 17, bearing: 0 }
 
 const start = [-97.143914, 49.892207]
 const dest = [-97.14385,  49.893019]
 
-const center = [lon, lat]
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNrbGFzc2VuIiwiYSI6ImNrbWYzOW0xdTMwZHAycHcwMXVvNDR0bjgifQ.AdOE2Tt6HU-_Wqn-NLvRzw';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center,
-    zoom: 17
+    ...initialMapParams,
 });
 
 map.on('load', function () {
@@ -58,27 +59,33 @@ map.on('load', function () {
     }).setLngLat(dest)
     .addTo(map);
 
-    document.getElementById('rotate-left').addEventListener('click', function () {
+    document.getElementById('rotate-left').addEventListener('click', () => {
         map.flyTo({
             bearing: map.getBearing() + ROTATION_AMOUNT,
         })
     });
 
-    document.getElementById('rotate-right').addEventListener('click', function () {
+    document.getElementById('rotate-right').addEventListener('click', () => {
         map.flyTo({
             bearing: map.getBearing() - ROTATION_AMOUNT,
         })
     });
 
-    document.getElementById('zoom-in').addEventListener('click', function () {
+    document.getElementById('zoom-in').addEventListener('click', () => {
         map.flyTo({
             zoom: map.getZoom() + 1,
         })
     });
 
-    document.getElementById('zoom-out').addEventListener('click', function () {
+    document.getElementById('zoom-out').addEventListener('click', () => {
         map.flyTo({
             zoom: map.getZoom() - 1,
+        })
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+        map.flyTo({
+            ...initialMapParams,
         })
     });
 });
