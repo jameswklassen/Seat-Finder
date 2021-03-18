@@ -12,10 +12,12 @@
 </head>
 <body>
 
-  <div class="container">
     <!-- <h1>Map</h1> -->
 
     <div class="map-container">
+      <div id="home-button">
+        <a class="btn" href="index.html">Home</a>
+      </div>
       <div id="seat-info">
         <div class="field" id="section">
           <span class="key">Section</span>
@@ -32,7 +34,6 @@
       </div>
       <div id="map"></div>
     </div>
-  </div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNrbGFzc2VuIiwiYSI6ImNrbWYzOW0xdTMwZHAycHcwMXVvNDR0bjgifQ.AdOE2Tt6HU-_Wqn-NLvRzw';
     var map = new mapboxgl.Map({

@@ -1,9 +1,7 @@
 
 .map-container {
 	position: relative;
-	height: 600px;
-	border-radius: 10px;
-	overflow: hidden;
+	height: 100vh;
 }
 
 #seat-info {

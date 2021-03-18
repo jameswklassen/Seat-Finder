@@ -1,6 +1,7 @@
 #seat-info {
   position: relative;
   max-width: none;
+  margin-top: 15px;
 }
 .list {
   margin: 15px 0;
