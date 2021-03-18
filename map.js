@@ -1,5 +1,6 @@
 const lat = 49.892665;
 const lon = -97.143768;
+const ROTATION_AMOUNT = 45;
 
 const start = [-97.143914, 49.892207]
 const dest = [-97.14385,  49.893019]
@@ -56,4 +57,28 @@ map.on('load', function () {
         color: "#469bd3",
     }).setLngLat(dest)
     .addTo(map);
+
+    document.getElementById('rotate-left').addEventListener('click', function () {
+        map.flyTo({
+            bearing: map.getBearing() + ROTATION_AMOUNT,
+        })
+    });
+
+    document.getElementById('rotate-right').addEventListener('click', function () {
+        map.flyTo({
+            bearing: map.getBearing() - ROTATION_AMOUNT,
+        })
+    });
+
+    document.getElementById('zoom-in').addEventListener('click', function () {
+        map.flyTo({
+            zoom: map.getZoom() + 1,
+        })
+    });
+
+    document.getElementById('zoom-out').addEventListener('click', function () {
+        map.flyTo({
+            zoom: map.getZoom() - 1,
+        })
+    });
 });
