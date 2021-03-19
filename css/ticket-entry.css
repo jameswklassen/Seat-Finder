@@ -1,0 +1,39 @@
+#upload {
+  padding: 30px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#upload span {
+  margin: 0 5px;
+  font-size: 40px;
+}
+
+.venue-selection {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.venue-selection label {
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+
+#ticket-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#ticket-entry .form-field {
+  text-align: center;
+  margin: 5px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#ticket-entry .form-field label {
+  font-size: 0.9rem;
+}

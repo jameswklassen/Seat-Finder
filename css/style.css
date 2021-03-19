@@ -2,11 +2,18 @@
   --primary: #469bd3;
   --primary-lighten: #49a9e9;
   --primary-darken: #387aa7;
-  --text: #000;
-  --text-inverse: #fff;
+  --bg-dark: #383838;
+  --text-dark: #2e2e2e;
+  --light: #fff;
   --border-radius: 10px;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+      --background: var(--light);
+      --foreground: var(--text-dark);
+  }
+}
 
 html {
   /* Load system fonts */
@@ -33,7 +40,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 0;
   margin: 0;
-  /* padding: 15px; */
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 /**
@@ -48,12 +56,16 @@ textarea {
   font-family: inherit;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px;
+}
 
 .container {
   max-width: 768px;
   margin: auto;
-  padding: 15px;
-  overflow: hidden;
+  padding: 0 15px;
   position: relative;
 }
 
@@ -69,6 +81,8 @@ textarea {
   font-weight: 600;
   width: 100%;
   margin-bottom: 5px;
+  border: none;
+  font-size: 1rem;
 }
 
 .btn[disabled] {
@@ -76,46 +90,38 @@ textarea {
   pointer-events: none;
 }
 
-
 .btn:hover:not([disabled]) {
   background-color: var(--primary-lighten);
 }
 
-form {
-  display: flex;
-  justify-content: space-between;
-}
-
-form .form-field {
+p.description {
+  opacity: 0.7;
   text-align: center;
-  margin: 5px;
-  flex-grow: 1;
-  flex-shrink: 1;
+  margin: 15px;
 }
 
-form .form-field input {
+select {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+input {
   display: block;
   border-radius: var(--border-radius);
   background-color: #eee;
-  padding: 15px;
+  padding: 15px 10px;
+  font-size: 1.2rem;
   border: 0;
   width: 100%;
   box-sizing: border-box;
-}
-#upload {
-  padding: 30px;
-  width: 100%;
-  margin-bottom: 30px;
+  text-align: center;
 }
 
 input[type="file"] {
   display: none;
-}
-.custom-file-upload {
-  display: inline-block;
-  cursor: pointer;
-  padding: 30px;
-  width: 100%;
 }
 
 #seat-info {
@@ -127,7 +133,7 @@ input[type="file"] {
   z-index: 10;
   display: flex;
   justify-content: space-around;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 #seat-info .field {
