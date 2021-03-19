@@ -39,3 +39,10 @@ video {
   height: 100%;
   object-fit: cover;
 }
+
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+}

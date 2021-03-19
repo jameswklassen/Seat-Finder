@@ -3,22 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"rel="stylesheet">
 
   <title>Seat Finder</title>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/ticket-entry.css">
 </head>
 
 <body>
   <div class="container">
     <h1>Seat Finder</h1>
-    
-    <a id="upload" class="btn" href="camera.html">Upload</a>
-    
-      <form id="ticket-entry" onsubmit="ticketEntrySubmit()">
+    <a id="upload" class="btn" href="camera.html">
+      <span class="material-icons">crop_free</span>
+      <span class="material-icons-outlined">collections</span>
+    </a>
+    <p class="description">Scan or upload ticket</p>
+
+    <hr>
+    <p class="description">Or enter ticket information</p>
+
+    <div class="venue-selection">
+      <label for="venues">Venues:</label>
+      <select name="venues" id="venues">
+        <option value="bellmts-place">BellMTS Place</option>
+        <option value="centennial-concert-hall">Centennial Concert Hall</option>
+        <option value="garrick-theater">Garrick Theater</option>
+      </select>
+    </div>
+    <form id="ticket-entry" onsubmit="ticketEntrySubmit()">
       <div class="form-field">
         <input type="number" id="section" name="section">
         <label for="section">Section</label>
@@ -32,8 +47,7 @@
         <label for="seat">Seat</label>
       </div>
     </form>
-      <input form="ticket-entry" disabled class="btn" id="ticket-entry-submit" type="submit" value="Submit">
-
+    <input form="ticket-entry" disabled class="btn" id="ticket-entry-submit" type="submit" value="Find Seat">
   </div>
 
   <!-- Scripts -->
