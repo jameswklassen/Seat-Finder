@@ -5,6 +5,7 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
   <title>Seat Finder</title>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -14,16 +15,12 @@
 </head>
 <body>
     <div class="map-container">
-      <div id="home-button">
-        <a class="btn" href="index.html">Home</a>
-      </div>
-
       <div id="map-controls">
-        <a class="btn" id="rotate-left">Left</a>
-        <a class="btn" id="rotate-right">Right</a>
-        <a class="btn" id="zoom-in">Zoom in</a>
-        <a class="btn" id="zoom-out">Zoom out</a>
-        <a class="btn" id="reset">Reset</a>
+        <a class="btn" id="rotate-left"><span class="material-icons">undo</span></a>
+        <a class="btn" id="rotate-right"><span class="material-icons">redo</span></a>
+        <a class="btn" id="zoom-in"><span class="material-icons">zoom_in</span></a>
+        <a class="btn" id="zoom-out"><span class="material-icons">zoom_out</span></a>
+        <a class="btn" id="reset"><span class="material-icons">navigation</span></a>
       </div>
       <div id="seat-info">
         <div class="field" id="section">
