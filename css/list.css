@@ -25,9 +25,16 @@
 }
 
 .list-item .direction {
-  background-color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border-radius: var(--border-radius);
   margin-right: 15px;
+  color: var(--primary);
+}
+
+.list-item .direction span {
+  font-size: 40px;
 }
