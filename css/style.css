@@ -1,3 +1,13 @@
+:root {
+  --primary: #469bd3;
+  --primary-lighten: #49a9e9;
+  --primary-darken: #387aa7;
+  --text: #000;
+  --text-inverse: #fff;
+  --border-radius: 10px;
+}
+
+
 html {
   /* Load system fonts */
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
@@ -11,6 +21,11 @@ html {
   
   /* Enable kerning and optional ligatures */
   text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -30,12 +45,7 @@ input,
 optgroup,
 select,
 textarea {
-font-family: inherit;
-}
-
-:root {
-  --primary: #469bd3;
-  --text: #fff;
+  font-family: inherit;
 }
 
 
@@ -49,16 +59,63 @@ font-family: inherit;
 
 .btn {
   display: inline-block;
-  border-radius: 5px;
-  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  padding: 15px 15px;
   background-color: var(--primary);
   text-decoration: none;
   color: #fff;
   text-align: center;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
-.btn:hover {
-  background-color: #49a9e9;
+.btn[disabled] {
+  background: #ddd;
+  pointer-events: none;
+}
+
+
+.btn:hover:not([disabled]) {
+  background-color: var(--primary-lighten);
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .form-field {
+  text-align: center;
+  margin: 5px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+form .form-field input {
+  display: block;
+  border-radius: var(--border-radius);
+  background-color: #eee;
+  padding: 15px;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+#upload {
+  padding: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
 }
 
 #seat-info {
@@ -88,7 +145,6 @@ font-family: inherit;
 }
 
 #home-button {
-  /* background-color: var(--primary); */
   color: #fff;
   position: fixed;
   z-index: 1;

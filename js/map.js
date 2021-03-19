@@ -1,3 +1,9 @@
+// -----------------------------------------------------------------
+// map.js
+//
+// purpose: specificallly for map navigation
+// -----------------------------------------------------------------
+
 const lat = 49.892665;
 const lon = -97.143768;
 const center = [lon, lat]
@@ -59,33 +65,34 @@ map.on('load', function () {
     }).setLngLat(dest)
     .addTo(map);
 
+    // Button controls
     document.getElementById('rotate-left').addEventListener('click', () => {
         map.flyTo({
             bearing: map.getBearing() + ROTATION_AMOUNT,
-        })
+        });
     });
 
     document.getElementById('rotate-right').addEventListener('click', () => {
         map.flyTo({
             bearing: map.getBearing() - ROTATION_AMOUNT,
-        })
+        });
     });
 
     document.getElementById('zoom-in').addEventListener('click', () => {
         map.flyTo({
             zoom: map.getZoom() + 1,
-        })
+        });
     });
 
     document.getElementById('zoom-out').addEventListener('click', () => {
         map.flyTo({
             zoom: map.getZoom() - 1,
-        })
+        });
     });
 
     document.getElementById('reset').addEventListener('click', () => {
         map.flyTo({
             ...initialMapParams,
-        })
+        });
     });
 });

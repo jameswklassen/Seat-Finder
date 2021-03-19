@@ -1,4 +1,3 @@
-
 .map-container {
 	position: relative;
 	height: 100vh;
@@ -20,8 +19,8 @@
 
 .btn {
 	display: inline-block;
-	border-radius: 10px;
-	padding: 5px 10px;
+	border-radius: var(--border-radius);
+	padding: 8px 10px;
 	background-color: var(--primary);
 	text-decoration: none;
 	color: #fff;

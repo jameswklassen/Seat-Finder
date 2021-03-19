@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <title>Seat Finder</title>
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/list.css">
+  <link rel="stylesheet" href="../css/camera.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Seat Finder</h1>
+
+    <div id="camera-container">
+      <div id="camera-controls" class="hidden">
+        <a class="btn" id="shutter"></a>
+      </div>
+      <video id="camera" autoplay></video>
+    </div>
+      <label id="upload" class="btn custom-file-upload">
+        <input type="file" accept="image/*">
+        Or upload from device
+    </label>
+
+  </div>
+
+  <!-- Pretty sure this script needs to be embedded -->
+  <script>
+    const constraints = {
+      video: true,
+    };
+
+    document.getElementById('camera-container').addEventListener('click', () => {
+      const video = document.querySelector("video");
+      if (!document.getElementById('camera-controls').classList.contains('hidden')) {
+        return
+      }
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream;
+
+        document.getElementById('camera-controls').classList.remove('hidden');
+      });
+    })
+
+
+  </script>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../js/base.js"></script>
+  <!-- <script type="text/javascript" src="../js/ticket-entry.js"></script> -->
+  <script type="text/javascript" src="../js/camera.js"></script>
+</body>
+</html>

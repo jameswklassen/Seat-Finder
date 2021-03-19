@@ -1,0 +1,41 @@
+#camera-container {
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  background-color: #ddd;
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#camera-container:hover {
+  background-color: #ccc;
+}
+
+#camera-container #camera-controls.hidden {
+  visibility: hidden;
+}
+
+#camera-container #camera-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#camera-container #camera-controls #shutter {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

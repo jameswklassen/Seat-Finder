@@ -3,34 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
 
   <title>Seat Finder</title>
   <link rel="shortcut icon" type="image/png" href="../favicon.png">
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/list.css">
 </head>
-<body>
 
+<body>
   <div class="container">
     <h1>Seat Finder</h1>
-
-    <form action="map.html" method="GET">
-      <label for="section">Section</label><br>
-      <input type="number" id="section" name="section"><br>
-      <label for="row">Row</label><br>
-      <input type="number" id="row" name="row"><br>
-      <label for="seat">Seat</label><br>
-      <input type="number" id="seat" name="seat"><br>
-      <input type="submit" value="Submit" />
+    
+    <a id="upload" class="btn" href="camera.html">Upload</a>
+    
+    <p>Or enter information manually</p>
+    <form>
+      <div class="form-field">
+        <input type="number" id="section" name="section">
+        <label for="section">Section</label>
+      </div>
+      <div class="form-field">
+        <input type="number" id="row" name="row">
+        <label for="row">Row</label>
+      </div>
+      <div class="form-field">
+        <input type="number" id="seat" name="seat">
+        <label for="seat">Seat</label>
+      </div>
     </form>
 
-    <input type="file" accept="image/*">
+    <a id="save" disabled class="btn">Continue</a>
+  </div>
 
-    <a class="btn" href="list.html">Continue</a>
-    </div>
-    <script type="text/javascript" src="../js/main.js"></script>
+  <!-- Scripts -->
+  <script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="../js/ticket-entry.js"></script>
 </body>
 </html>
