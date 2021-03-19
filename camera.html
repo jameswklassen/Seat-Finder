@@ -33,7 +33,11 @@
   <!-- Pretty sure this script needs to be embedded -->
   <script>
     const constraints = {
-      video: true,
+      video: {
+        facingMode: {
+          exact: 'environment'
+        }
+      },
     };
 
     document.getElementById('camera-container').addEventListener('click', () => {
