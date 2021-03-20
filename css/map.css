@@ -1,9 +1,3 @@
-:root {
-  --button-size: 70px;      /* width/height of each buton */
-  --button-offset: 15px;    /* offset from screen edge */
-  --button-margin: 15px;    /* space between buttons */
-}
-
 .map-container {
   position: relative;
   height: 100vh;
