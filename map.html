@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"rel="stylesheet">
 
   <title>Seat Finder</title>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -15,6 +15,27 @@
 </head>
 <body>
     <div class="map-container">
+      <div id="help-button-container">
+        <a id="help-button" class="btn">
+          <span class="material-icons">help_outline</span>
+        </a>
+
+        <!-- Help modal -->
+        <div id="modal-overlay" class="modal-overlay">
+          <div class="modal">
+            <span class="close"><span class="material-icons-outlined">close</span></span>
+            <h2>Help Desk</h2>
+            <p>Section 200</p>
+            <p></b>204-555-5555</b></p>
+
+            <div class="button-container">
+              <a href="" class="btn secondary">Cancel</a>
+              <a href="" class="btn call"><span class="material-icons">call</span>Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="map-controls">
         <a class="btn" id="rotate-left"><span class="material-icons">undo</span></a>
         <a class="btn" id="rotate-right"><span class="material-icons">redo</span></a>
@@ -41,5 +62,6 @@
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/help.js"></script>
 </body>
 </html>
