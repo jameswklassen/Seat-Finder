@@ -1,19 +1,23 @@
-// var overlay = document.getElementById("modal-overlay");
-// var span = document.getElementsByClassName("close")[0];
-
 var directions = document.querySelectorAll(".list .direction");
 
 directions.forEach((direction) => {
-  direction.onclick = (e) => {
-    const id = direction.getAttribute('id');
+  direction.onclick = () => {
+
+    // fill the modal with this HTML
     html = `
-      <div class="direction-modal">
-      <div class="image-container" style="background-image: url('${IMAGE_DIR}/directions/${id}.png')">
-      </div>
-      ${direction.innerHTML}
-      </div>
+    <div class="direction-modal">
+    <div class="image-container" style="background-image: url('${IMAGE_DIR}/directions/${direction.getAttribute('id')}.png')">
+    </div>
+    ${direction.innerHTML}
+    </div>
     `;
 
-    openModal(html, 'direction');
+    // add custom classnames to the modal/close button
+    classNames = {
+      modal: 'direction',
+      close: 'btn',
+    }
+
+    openModal(html, classNames);
   }
 });
