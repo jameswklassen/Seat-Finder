@@ -3,14 +3,7 @@
   height: 100vh;
 }
 
-#seat-info {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  left: 15px;
-}
-
-#map { 
+#map {
   position: absolute; 
   top: 0; 
   bottom: 0; 

@@ -1,12 +1,9 @@
-#seat-info {
-  position: relative;
-  max-width: none;
-  margin-top: 15px;
-}
 .list {
   margin: 15px 0;
+  margin-top: 140px;
   padding-bottom: var(--button-size);
 }
+
 .list-item {
   display: flex;
   background-color: #eee;

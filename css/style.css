@@ -141,21 +141,42 @@ input[type="file"] {
   display: none;
 }
 
+#back-button-container {
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#back-button-container a.btn:hover {
+  background: none;
+}
+
 #seat-info {
   background-color: var(--primary);
   color: #fff;
-  border-radius: 10px;
   padding: 15px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 400px;
+}
+
+#seat-info .venue {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #seat-info .field {
   text-align: center;
-  margin: 15px;
+  margin: 15px 15px 0;
 }
 
 #seat-info .key {

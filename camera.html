@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"rel="stylesheet">
 
   <title>Seat Finder</title>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -19,46 +20,23 @@
 
     <div id="camera-container">
       <div id="camera-controls" class="hidden">
-        <a class="btn" id="shutter"></a>
+        <a class="btn" id="shutter">
+          <span class="material-icons">photo_camera</span>
+        </a>
       </div>
       <div id="camera-overlay" class="">
+        <span>Scan ticket</span>
       </div>
       <video id="camera" autoplay playsinline></video>
     </div>
       <label id="upload" class="btn custom-file-upload">
         <input type="file" accept="image/*">
-        Or upload from device
+        Upload from device
     </label>
-
   </div>
-
-  <!-- Pretty sure this script needs to be embedded -->
-  <script>
-    const constraints = {
-      video: {
-        facingMode: 'environment'
-      },
-    };
-
-    document.getElementById('camera-container').addEventListener('click', () => {
-      const video = document.querySelector("video");
-      if (!document.getElementById('camera-controls').classList.contains('hidden')) {
-        return
-      }
-      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-        video.srcObject = stream;
-
-        document.getElementById('camera-controls').classList.remove('hidden');
-        document.getElementById('camera-overlay').classList.add('active');
-      });
-    })
-
-
-  </script>
 
   <!-- Scripts -->
   <script type="text/javascript" src="js/base.js"></script>
-  <!-- <script type="text/javascript" src="js/ticket-entry.js"></script> -->
   <script type="text/javascript" src="js/camera.js"></script>
 </body>
 </html>

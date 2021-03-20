@@ -17,6 +17,9 @@ const DEFAULT_SEAT_INFO = {
   seat: 14
 };
 
+// Grab seat info from LocalStorage
+const seatInfo = JSON.parse(localStorage.getItem('seatInfo'));
+
 
 // Helper functions
 // -----------------------------------------------------------------

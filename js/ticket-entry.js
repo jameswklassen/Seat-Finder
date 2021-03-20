@@ -36,12 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Determine where we go next based on the prototype version
   entryForm.action = `${PROTOTYPE_VERSION}.html`;
 
-  if (validateFields()) {
-    submitButton.removeAttribute('disabled');
-  }
 
   // Add a listener to each form field so we can validate on form change
   [...(document.getElementsByClassName('form-field'))].forEach((field) => {
+    const id = field.querySelector('input').getAttribute('id');
+    if (seatInfo && seatInfo[id]) {
+      field.querySelector('input').innerHTML = seatInfo[id];
+      field.querySelector('input').setAttribute('value', seatInfo[id])
+    }
     field.querySelector('input').addEventListener('input', () => {
       if (validateFields()) {
         submitButton.removeAttribute('disabled');
@@ -51,4 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  if (validateFields()) {
+    submitButton.removeAttribute('disabled');
+  }
 });

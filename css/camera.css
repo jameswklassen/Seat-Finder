@@ -19,14 +19,27 @@
 #camera-container #camera-overlay {
   z-index: 3;
   border-radius: 20px;
-  border: 6px dashed rgba(140,140,140, 0.3);
+  border: 7px dashed rgba(140,140,140, 0.3);
   height: 180px;
   width: 90%;
   max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#camera-container #camera-overlay span {
+  display: block;
+  font-size: 2rem;
+  color: rgba(140,140,140, 0.3);
 }
 
 #camera-container #camera-overlay.active {
   border: 6px dashed rgba(255,255,255, 0.3);
+}
+
+#camera-container #camera-overlay.active span {
+  display: none;
 }
 
 #camera-container #camera-controls.hidden {
@@ -50,6 +63,11 @@
   width: 80px;
   height: 80px;
   margin: auto;
+  padding: 15px 16px;
+}
+
+#camera-container #camera-controls #shutter span {
+  font-size: 40px;
 }
 
 video {
