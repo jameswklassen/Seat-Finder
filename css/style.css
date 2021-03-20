@@ -193,8 +193,7 @@ input[type="file"] {
 .modal-overlay {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 10; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -209,11 +208,13 @@ input[type="file"] {
   background-color: #fefefe;
   margin: auto;
   padding: 15px;
-  border: 1px solid #888;
   width: 90%;
   max-width: 400px;
   border-radius: var(--border-radius);
   position: relative;
+  overflow: hidden;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .modal .button-container {
@@ -245,6 +246,7 @@ input[type="file"] {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
 }
 
 .close span {

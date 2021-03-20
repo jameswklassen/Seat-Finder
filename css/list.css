@@ -5,6 +5,7 @@
 }
 .list {
   margin: 15px 0;
+  padding-bottom: var(--button-size);
 }
 .list-item {
   display: flex;
@@ -35,6 +36,72 @@
   color: var(--primary);
 }
 
+.list a:last-child .list-item {
+  /* if we want to style the last item differently we can */
+}
+
 .list-item .direction span {
   font-size: 40px;
+}
+
+.modal.direction {
+  max-width: 700px;
+  height: 70vh;
+  z-index: ;
+}
+
+.modal.direction .close {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.modal.direction .close:hover {
+  opacity: 1;
+}
+
+.direction-modal .list-item {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  margin-right: 40px;
+}
+
+.direction-modal .list-item .direction {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.direction-modal .list-item .description {
+  color: #fff;
+}
+
+.direction-modal::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 75px;
+  background-color: var(--primary);
+  z-index: 0;
+}
+
+.direction-modal .image-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.image-container::after {
+  content: '';
+  position: relative;
+  height: 400px;
+}
+
+.direction-modal img {
+  width: 100%;
 }

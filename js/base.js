@@ -9,6 +9,7 @@
 // -----------------------------------------------------------------
 const TICKET_FIELDS = ['section', 'row', 'seat'];
 const PROTOTYPE_VERSION = localStorage.getItem('prototype') || 'map';
+const IMAGE_DIR = "img"
 
 const DEFAULT_SEAT_INFO = {
   section: 120,
