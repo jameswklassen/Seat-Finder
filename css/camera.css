@@ -6,10 +6,27 @@
   height: 60vh;
   width: 100%;
   margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #camera-container:hover {
   background-color: #ccc;
+}
+
+#camera-container #camera-overlay {
+  z-index: 3;
+  border-radius: 20px;
+  border: 6px dashed rgba(140,140,140, 0.3);
+  height: 180px;
+  width: 90%;
+  max-width: 450px;
+}
+
+#camera-container #camera-overlay.active {
+  border: 6px dashed rgba(255,255,255, 0.3);
 }
 
 #camera-container #camera-controls.hidden {
@@ -29,12 +46,14 @@
 
 #camera-container #camera-controls #shutter {
   border-radius: 50%;
+  border: 5px solid var(--primary-darken);
   width: 80px;
   height: 80px;
   margin: auto;
 }
 
 video {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;

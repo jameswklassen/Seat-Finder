@@ -21,6 +21,8 @@
       <div id="camera-controls" class="hidden">
         <a class="btn" id="shutter"></a>
       </div>
+      <div id="camera-overlay" class="">
+      </div>
       <video id="camera" autoplay playsinline></video>
     </div>
       <label id="upload" class="btn custom-file-upload">
@@ -34,9 +36,7 @@
   <script>
     const constraints = {
       video: {
-        facingMode: {
-          exact: 'environment'
-        }
+        facingMode: 'environment'
       },
     };
 
@@ -49,6 +49,7 @@
         video.srcObject = stream;
 
         document.getElementById('camera-controls').classList.remove('hidden');
+        document.getElementById('camera-overlay').classList.add('active');
       });
     })
 
