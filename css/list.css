@@ -46,13 +46,18 @@
 
 .modal.direction {
   max-width: 700px;
-  height: 70vh;
-  z-index: ;
+  height: 60vh;
+  overflow: hidden;
+  overflow: visible;
 }
 
 .modal.direction .close {
-  color: #fff;
-  opacity: 0.5;
+  top: 103%;
+  color: var(--primary);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal.direction .close:hover {
@@ -86,6 +91,7 @@
   height: 75px;
   background-color: var(--primary);
   z-index: 0;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .direction-modal .image-container {
@@ -94,6 +100,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .image-container::after {

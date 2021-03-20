@@ -1,12 +1,16 @@
 const modal = document.querySelector('.modal');
 const modalOverlay = document.getElementById('modal-overlay');
-const modalClose = document.getElementsByClassName('close')[0];
+const close = document.getElementsByClassName('close')[0];
 const modalContent = document.querySelector('.modal #content');
 
-console.log(modal.classList);
+const defaultClassnames = {
+  modal: 'modal',
+  close: 'close',
+}
+
 
 // When the user clicks on <span> (x), close the modal
-modalClose.onclick = () => {
+close.onclick = () => {
   closeModal();
 }
 
@@ -20,13 +24,17 @@ modalOverlay.onclick = (event) => {
 function closeModal() {
   modalOverlay.style.display = "none";
 
-  modal.classList = null;
-  modal.classList = ['modal'];
+  modal.classList = defaultClassnames.modal;
+  close.classList = defaultClassnames.close;
 }
 
-function openModal(html, classnames = '') {
-  if (classnames) {
-    modal.classList.add(classnames);
+function openModal(html, classnames = {}) {
+  if (classnames.modal) {
+    modal.classList.add(classnames.modal);
+  }
+
+  if (classnames.close) {
+    close.classList.add(classnames.close)
   }
 
   modalOverlay.style.display = "block";
