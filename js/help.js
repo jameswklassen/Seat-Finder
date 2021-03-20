@@ -13,7 +13,7 @@ span.onclick = () => {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = (event) => {
+overlay.onclick = (event) => {
   if (event.target == overlay) {
     overlay.style.display = "none";
   }
