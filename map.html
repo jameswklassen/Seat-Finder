@@ -14,54 +14,49 @@
   <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
-    <div class="map-container">
-      <div id="help-button-container">
+  <div class="map-container">
+    <div id="help-button-container">
         <a id="help-button" class="btn">
           <span class="material-icons">help_outline</span>
         </a>
-
-        <!-- Help modal -->
-        <div id="modal-overlay" class="modal-overlay">
-          <div class="modal">
-            <span class="close"><span class="material-icons-outlined">close</span></span>
-            <h2>Help Desk</h2>
-            <p>Section 200</p>
-            <p></b>204-555-5555</b></p>
-
-            <div class="button-container">
-              <a href="" class="btn secondary">Cancel</a>
-              <a href="" class="btn call"><span class="material-icons">call</span>Call</a>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div id="map-controls">
-        <a class="btn" id="rotate-left"><span class="material-icons">undo</span></a>
-        <a class="btn" id="rotate-right"><span class="material-icons">redo</span></a>
-        <a class="btn" id="zoom-in"><span class="material-icons">zoom_in</span></a>
-        <a class="btn" id="zoom-out"><span class="material-icons">zoom_out</span></a>
-        <a class="btn" id="reset"><span class="material-icons">navigation</span></a>
-      </div>
-      <div id="seat-info">
-        <div class="field" id="section">
-          <span class="key">Section</span>
-          <span class="value"></span>
-        </div>
-        <div class="field" id="row">
-          <span class="key">Row</span>
-          <span class="value"></span>
-        </div>
-        <div class="field" id="seat">
-          <span class="key">Seat</span>
-          <span class="value"></span>
-        </div>
-      </div>
-      <div id="map"></div>
+    <div id="map-controls">
+      <a class="btn" id="rotate-left"><span class="material-icons">undo</span></a>
+      <a class="btn" id="rotate-right"><span class="material-icons">redo</span></a>
+      <a class="btn" id="zoom-in"><span class="material-icons">zoom_in</span></a>
+      <a class="btn" id="zoom-out"><span class="material-icons">zoom_out</span></a>
+      <a class="btn" id="reset"><span class="material-icons">navigation</span></a>
     </div>
-    <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/navigation.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    <script type="text/javascript" src="js/help.js"></script>
+    <div id="seat-info">
+      <div class="field" id="section">
+        <span class="key">Section</span>
+        <span class="value"></span>
+      </div>
+      <div class="field" id="row">
+        <span class="key">Row</span>
+        <span class="value"></span>
+      </div>
+      <div class="field" id="seat">
+        <span class="key">Seat</span>
+        <span class="value"></span>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <!-- Modal skeleton definition -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <span class="close"><span class="material-icons-outlined">close</span></span>
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <!-- Scripts for map -->
+  <script type="text/javascript" src="js/base.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/help.js"></script>
 </body>
 </html>

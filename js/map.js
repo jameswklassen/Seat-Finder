@@ -66,33 +66,33 @@ map.on('load', function () {
     .addTo(map);
 
     // Button controls
-    document.getElementById('rotate-left').addEventListener('click', () => {
+    document.getElementById('rotate-left').onclick = () => {
         map.flyTo({
             bearing: map.getBearing() + ROTATION_AMOUNT,
         });
-    });
+    };
 
-    document.getElementById('rotate-right').addEventListener('click', () => {
+    document.getElementById('rotate-right').onclick = () => {
         map.flyTo({
             bearing: map.getBearing() - ROTATION_AMOUNT,
         });
-    });
+    };
 
-    document.getElementById('zoom-in').addEventListener('click', () => {
+    document.getElementById('zoom-in').onclick = () => {
         map.flyTo({
             zoom: map.getZoom() + 1,
         });
-    });
+    };
 
-    document.getElementById('zoom-out').addEventListener('click', () => {
+    document.getElementById('zoom-out').onclick = () => {
         map.flyTo({
             zoom: map.getZoom() - 1,
         });
-    });
+    };
 
-    document.getElementById('reset').addEventListener('click', () => {
+    document.getElementById('reset').onclick = () => {
         map.flyTo({
             ...initialMapParams,
         });
-    });
+    };
 });

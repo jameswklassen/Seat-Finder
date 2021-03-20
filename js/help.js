@@ -1,20 +1,17 @@
-var overlay = document.getElementById("modal-overlay");
-var btn = document.getElementById("help-button");
-var span = document.getElementsByClassName("close")[0];
+const helpButton = document.getElementById('help-button');
 
-// When the user clicks the button, open the modal 
-btn.onclick = () => {
-  overlay.style.display = "block";
-}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = () => {
-  overlay.style.display = "none";
-}
+helpButton.onclick = () => {
+  helpText = `
+  <h2>Help Desk</h2>
+  <p>Section 200</p>
+  <p></b>204-555-5555</b></p>
+  
+  <div class="button-container">
+  <a href="" class="btn secondary">Cancel</a>
+  <a href="" class="btn call"><span class="material-icons">call</span>Call</a>
+  </div>
+  `
 
-// When the user clicks anywhere outside of the modal, close it
-overlay.onclick = (event) => {
-  if (event.target == overlay) {
-    overlay.style.display = "none";
-  }
+  openModal(helpText);
 }
