@@ -68,6 +68,11 @@ hr {
   margin: 15px;
 }
 
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
 .container {
   max-width: 768px;
   margin: auto;
@@ -95,6 +100,12 @@ hr {
   background: #ddd;
   color: var(--text-dark);
 }
+
+.btn.light {
+  background: #fff;
+  color: var(--primary);
+}
+
 .btn[disabled] {
   background: #eee;
   color: #777;
@@ -105,6 +116,9 @@ hr {
   background-color: var(--primary-lighten);
 }
 
+.btn.light:hover {
+  background: #eee;
+}
 .btn.secondary:hover {
   background: #eee;
   color: var(--text-dark);
