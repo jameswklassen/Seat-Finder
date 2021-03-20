@@ -67,3 +67,17 @@
   right: calc(var(--button-offset) + 2 * (var(--button-size) + var(--button-margin)));
   bottom: var(--button-offset);
 }
+
+.marker {
+  color: #fff;
+  background-color: var(--primary);
+  padding: 4px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker span {
+  font-size: 30px;
+}
