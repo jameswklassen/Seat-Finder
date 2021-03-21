@@ -38,7 +38,6 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
-  -webkit-appearance: none;
 }
 
 body {
@@ -60,6 +59,11 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
+}
+
+input,
+button, {
+  -webkit-appearance: none;
 }
 
 hr {
@@ -128,15 +132,6 @@ p.description {
   opacity: 0.7;
   text-align: center;
   margin: 15px;
-}
-
-select {
-  cursor: pointer;
-  padding: 10px;
-  background-color: #eee;
-  border-radius: var(--border-radius);
-  border: none;
-  font-size: 0.8rem;
 }
 
 input {
