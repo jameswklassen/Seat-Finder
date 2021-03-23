@@ -39,11 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add a listener to each form field so we can validate on form change
   [...(document.getElementsByClassName('form-field'))].forEach((field) => {
-    const id = field.querySelector('input').getAttribute('id');
-    if (seatInfo && seatInfo[id]) {
-      field.querySelector('input').innerHTML = seatInfo[id];
-      field.querySelector('input').setAttribute('value', seatInfo[id])
-    }
     field.querySelector('input').addEventListener('input', () => {
       if (validateFields()) {
         submitButton.removeAttribute('disabled');
