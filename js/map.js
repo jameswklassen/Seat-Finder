@@ -79,7 +79,7 @@ map.on('load', function () {
       'line-cap': 'round'
     },
     'paint': {
-      'line-color': '#469bd3',
+      'line-color': '#007acb',
       'line-opacity': 0.8,
       'line-width': 8
     }
