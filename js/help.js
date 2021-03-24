@@ -8,8 +8,8 @@ helpButton.onclick = () => {
   <p></b>204-555-5555</b></p>
   
   <div class="button-container">
-  <a href="" class="btn secondary">Cancel</a>
-  <a href="" class="btn call"><span class="material-icons">call</span>Call</a>
+  <a class="btn secondary">Cancel</a>
+  <a class="btn call"><span class="material-icons">call</span>Call</a>
   </div>
   `
 
