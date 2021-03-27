@@ -12,6 +12,9 @@ helpButton.onclick = () => {
   <a class="btn call"><span class="material-icons">call</span>Call</a>
   </div>
   `
+
+  close.innerHTML = '<span class="material-icons-outlined">close</span>';
+
   openModal(helpText);
 
   document.getElementById('help-close').onclick = () => {

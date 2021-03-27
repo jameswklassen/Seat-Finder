@@ -1,6 +1,6 @@
 const modal = document.querySelector('.modal');
 const modalOverlay = document.getElementById('modal-overlay');
-const close = document.getElementsByClassName('close')[0];
+const close = document.querySelector('#modal-overlay .close');
 const modalContent = document.querySelector('.modal #content');
 
 const defaultClassnames = {

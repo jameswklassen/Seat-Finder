@@ -18,6 +18,8 @@ directions.forEach((direction) => {
       close: 'btn',
     }
 
+    // In list view we want a text 'close' button
+    close.innerHTML = 'Close';
     openModal(html, classNames);
   }
 });
